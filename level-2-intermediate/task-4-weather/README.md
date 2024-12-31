@@ -70,6 +70,19 @@ As this program is primarily dealing with string and numbers, we don't need any 
 ```bash
 node weather-converter.js
 ```
+### Example Output:
+Welcome to the Temperature Converter!
+Enter the temperature: 20
+
+Choose conversion direction:
+1. Celsius to Fahrenheit
+2. Fahrenheit to Celsius
+Enter 1 or 2: 
+
+20°C is equal to 68.00°F
+Do you want to convert another temperature? (y/n): n
+
+Thank you for using the Temperature Converter! Goodbye!
 
 ### Description
 This is a simple command-line application that converts temperatures between Celsius and Fahrenheit. 
