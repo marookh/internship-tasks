@@ -20,55 +20,51 @@ Steps:
 
 
 ### Algorithm 
-1. Define a Task Class:
 
- - Create a Task class with the following attributes:
-  id (unique identifier for each task)
-  name (the name/title of the task)
-  description (details about the task)
-  status (e.g., "Pending", "Completed").
+Create a TaskManager class that has the following methods:
+- createTask(): creates a new task and adds it to the tasks list.
+- readTasks(): displays all the tasks in the tasks list.
+- updateTask(): updates a task in the tasks list.
+- deleteTask(): deletes a task from the tasks list.
+- countTask(): returns the number of tasks created.
+- listSize(): returns the number of tasks in the tasks list.
+- toString(): returns a string representation of the tasks list.
+- forEach(callback): iterates over the tasks list and calls the callback function for each task.
+- add(task): adds a task to the tasks list.
 
-2. Create a TaskManager class:
- - Create an empty array, tasks, to store task objects.
-- Include a variable to generate unique IDs for tasks.
+The TaskManager class should have the following properties:
+- tasks: an array to store tasks.
+- taskIdCounter: a counter to keep track of the number of tasks created.
 
-3. Main Application Menu:
-- Display a menu with options for the user:
-  Create a new task.
-  View all tasks.
-  Update a task.
-  Delete a task.
-  Exit the application.
-  Prompt the user to choose an option.
-4. Handle User Input:
-- Based on the user's choice, perform the corresponding CRUD operation:
- - Create:
-  Prompt the user for task details (title, and initial status).
-  Generate a unique ID for the task.
-  Create a new Task object and add it to the tasks array.
-- Read:
-  Loop through the tasks array.
-  Display each task's ID title, and status.
-- Update:
-  Prompt the user for the id of the task to update.
-  Find the task in the tasks array.
-  If the task exists:
-   Prompt the user for updated details (e.g., new, title, or status or priority).
+---
+Create a Task class that represents a task with the following methods:
+- constructor(id, title, status, priority): initializes the task with the given id, title, status, and priority.
 
-  Update the task’s attributes.
-  If the task does not exist, inform the user.
-- Delete:
-  Prompt the user for the id of the task to delete.
-  Find the task in the tasks array.
-  If the task exists, remove it from the array.
-  If the task does not exist, inform the user.
-- Repeat or Exit:
+The Task class should have the following properties:
+- id: a unique identifier for the task.
+- title: the title of the task.
+- status: the status of the task (default is "Pending").
+- priority: the priority of the task (default is "").
+---
 
-  After completing an operation, return to the main menu.
-  If the user chooses to exit, display a goodbye message and terminate the application.
+Use the TaskManager class main function that displays a menu with the following options:
+1. Create Task
+2. View Tasks
+3. Update Task
+4. Delete Task
+5. Exit
+---
+The main function should:
+- take user input to perform the corresponding action based on the menu option selected.
+- continue to display the menu until the user chooses to exit the application.
+- clear the console after each menu option is selected.
+- display appropriate messages to the user based on the action performed.
+- handle invalid input from the user and display an error message.
+- call the corresponding methods of the TaskManager class based on the menu option selected.
+- be called at the end of the script to start the application.
 
-- Test the Application:
-
+The TaskManager class and the main function should be implemented in the same file.
+---
 Verify the application works as expected:
   Create tasks.
   Read and display all tasks.
