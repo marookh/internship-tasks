@@ -1,0 +1,29 @@
+{
+  "name": "internship-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "4",
+    "http-errors": "1",
+    "morgan": "1.9",
+    "readline-sync": "^1.4.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marookh/internship-tasks.git"
+  },
+  "author": "Khumari Ayoub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marookh/internship-tasks/issues"
+  },
+  "homepage": "https://github.com/marookh/internship-tasks#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.1.0"
+  }
+}

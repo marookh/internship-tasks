@@ -48,7 +48,7 @@ End: Congratulate the player and ask if they want to play again.
 ## Explanation
 For this task, I opted for the Procedural Programming paradigm for two main reasons: first, there was no specific guidance on which model to use, and second, the current game is small. This makes Procedural Programming a suitable choice.
 
-The program flow is controlled using a series of `if` statements, which allows for straightforward decision-making. To improve clarity and structure, I extracted some reusable code into functions. I also used arrow function syntax for its compactness, which helps keep the code concise. Additionally, I employed loops to facilitate repeated execution of certain tasks within the game.
+The program flow is controlled using a series of `if` statements, which allows for straightforward decision-making. To improve clarity and structure, I extracted some reusable code into functions. I also used arrow function syntax for its compactness, which helps keep the code concise. Additionally, I used loops to facilitate repeated execution of certain tasks within the game.
 ---
 ## How to Run
 1. Clone or download the repository.

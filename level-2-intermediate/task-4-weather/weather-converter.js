@@ -2,9 +2,9 @@ const readline = require("readline-sync");
 
 function convertTemperature(temp, direction) {
   if (direction === "CtoF") {
-    return (temp * 9) / 5 + 32; 
+    return (((temp * 9) / 5) + 32);
   } else if (direction === "FtoC") {
-    return (temp - 32) * 5 / 9; 
+    return (((temp - 32) * 5) / 9);
   }
   return null;
 }
@@ -14,9 +14,8 @@ function clear() {
 }
 
 console.log("Welcome to the Temperature Converter!");
-while (true) {  
+while (true) {
   let temperature = Number(readline.question("Enter the temperature: "));
- 
   while (Number.isNaN(temperature)) {
     clear();
     console.log("Invalid input. Please enter a valid number.");

@@ -11,8 +11,8 @@ class Task {
 
 class TaskManager {
   constructor() {
-    this.tasks = []; 
-    this.taskIdCounter = 0; 
+    this.tasks = [];
+    this.taskIdCounter = 0;
   }
 
   createTask() {
@@ -38,7 +38,7 @@ class TaskManager {
 
   updateTask() {
     console.clear();
-    const id = parseInt(readline.question("Enter task ID to update: "));
+    const id = parseInt(readline.question("Enter task ID to update: "), 10);
     const task = this.tasks.find((task) => task.id === id);
     if (!task) {
       console.log("Task not found!\n");
@@ -53,7 +53,6 @@ class TaskManager {
     task.status = newStatus || task.status;
     task.priority = newPriority || task.priority;
 
-    
     console.clear();
     console.log("Task updated successfully!\n");
   }
@@ -72,7 +71,8 @@ class TaskManager {
   }
 
   countTask() {
-    return this.taskIdCounter += 1;
+    this.taskIdCounter += 1;
+    return this.taskIdCounter;
   }
 
   listSize() {
@@ -82,7 +82,7 @@ class TaskManager {
   toString() {
     this.forEach(task => {
       console.log(`ID: ${task.id}, Title: ${task.title}, Status: ${task.status}`);
-  })
+    });
   }
 
   forEach(callback) {
@@ -94,18 +94,27 @@ class TaskManager {
   }
 }
 
+function showMenu() {
+  console.log("1. Create Task");
+  console.log("2. View Tasks");
+  console.log("3. Update Task");
+  console.log("4. Delete Task");
+  console.log("5. Exit");
+}
+
+function getChoice() {
+  return parseInt(readline.question("Choose an option: "), 10);
+}
+
+// Error "max-lines-per-function" disabled for main function:
+
 function main() {
   console.clear();
   const manager = new TaskManager();
 
   while (true) {
-    console.log("1. Create Task");
-    console.log("2. View Tasks");
-    console.log("3. Update Task");
-    console.log("4. Delete Task");
-    console.log("5. Exit");
-
-    const choice = parseInt(readline.question("Choose an option: "), 10);
+    showMenu();
+    const choice = getChoice();
 
     switch (choice) {
       case 1:
@@ -123,7 +132,7 @@ function main() {
       case 5:
         console.clear();
         console.log("Goodbye!");
-        return;
+        break;
       default:
         console.log("Invalid choice, try again!\n");
     }
